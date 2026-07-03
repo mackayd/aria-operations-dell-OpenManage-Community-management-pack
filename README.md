@@ -16,8 +16,6 @@ It uses Dell OME REST endpoints under `/api` only.
 | Description | Aria Operations Community management pack for Dell OpenManage Enterprise 4.x |
 | Source type | Aria Management Pack Builder HTTP adapter |
 | API used | Dell OpenManage Enterprise REST `/api` |
-| Redfish used | No |
-| External shim/proxy required | No |
 | Licence | MIT |
 
 ## Repository Contents
@@ -44,6 +42,9 @@ It uses Dell OME REST endpoints under `/api` only.
         ├── dell-server-subsystem-health.png
         └── production-icons-contact-sheet.png
 ```
+
+### Topology
+
 ![Dell OpenManage Topology](images/Aria-Topology.png)
 
 
@@ -57,6 +58,9 @@ Two PAK files are included:
 | `Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak` | Same management pack with custom resource icons injected after the PAK was built. This is the recommended PAK for normal use. |
 
 The icon-injected PAK does not change collection logic, API requests, metrics, relationships, dashboards, or adapter behaviour. It only updates image assets so Dell OME resource types are easier to recognise in Aria Operations.
+
+### Custom Icons
+
 ![Custom Icons](images/production-icons-contact-sheet.png)
 
 
@@ -251,7 +255,7 @@ Dashboard receiver-widget behaviour can vary depending on Aria Operations versio
 
 ## Importing the MP Builder JSON for Editing
 
-The MP Builder export is included for users who want to inspect, modify, or rebuild the management pack.
+The MP Builder export is included for users who want to inspect, modify, or rebuild the management pack, which can be directly imported into Aria Management Pack Builder Appliance.
 
 File:
 
@@ -280,8 +284,6 @@ mp-builder/Dell-OME-RestAPI-Community-Management-Pack-Export-1.5.0.json
 ### Important Notes When Editing
 
 - Keep the Dell OME REST `/api` approach intact.
-- Do not add Redfish requests unless you intentionally want a different pack design.
-- Do not add an external shim/proxy requirement.
 - Preserve request chaining from `api/DeviceService/Devices` into per-server inventory endpoints.
 - Preserve the parent/child relationships unless you are deliberately changing topology.
 - If you change object type names, update the icon mapping and icon injection process.
