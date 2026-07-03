@@ -4,7 +4,7 @@ Community VMware Aria Operations management pack for monitoring Dell OpenManage 
 
 This management pack is built with **Aria Management Pack Builder** and collects server inventory, health, power, temperature, operating system, location, and hardware component information from Dell OpenManage Enterprise.
 
-It uses Dell OME REST endpoints under `/api` only. It does **not** use Redfish and does **not** require an external shim, proxy, or normalising service.
+It uses Dell OME REST endpoints under `/api` only.
 
 ## Release
 
@@ -44,6 +44,8 @@ It uses Dell OME REST endpoints under `/api` only. It does **not** use Redfish a
         ├── dell-server-subsystem-health.png
         └── production-icons-contact-sheet.png
 ```
+![Dell OpenManage Topology](images/Aria-Topology.png)
+
 
 ## Which PAK Should I Install?
 
@@ -55,6 +57,8 @@ Two PAK files are included:
 | `Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak` | Same management pack with custom resource icons injected after the PAK was built. This is the recommended PAK for normal use. |
 
 The icon-injected PAK does not change collection logic, API requests, metrics, relationships, dashboards, or adapter behaviour. It only updates image assets so Dell OME resource types are easier to recognise in Aria Operations.
+![Custom Icons](images/production-icons-contact-sheet.png)
+
 
 ## What It Monitors
 
