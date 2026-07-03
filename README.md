@@ -24,7 +24,7 @@ It uses Dell OME REST endpoints under `/api` only.
 .
 ├── LICENSE.md
 ├── README.md
-├── PAK Installers
+├── PAK-Release
 │   ├── Dell-OME-RestAPI-Community-Management-Pack-1.5.0.pak
 │   └── Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak
 ├── mp-builder
@@ -184,7 +184,7 @@ No inbound connection from Dell OME to Aria Operations is required for normal po
 4. Select the recommended PAK:
 
    ```text
-   PAK Installers/Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak
+   PAK-Release/Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak
    ```
 
 5. Accept the prompts and allow the PAK to install.
@@ -327,9 +327,9 @@ From the root of the repository:
 
 ```powershell
 .\CustomIcon-tooling\inject-ome-pak-assets.ps1 `
-  -Pak ".\PAK Installers\Dell-OME-RestAPI-Community-Management-Pack-1.5.0.pak" `
+  -Pak ".\PAK-Release\Dell-OME-RestAPI-Community-Management-Pack-1.5.0.pak" `
   -IconsDir ".\CustomIcon-tooling\icons" `
-  -Output ".\PAK Installers\Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak" `
+  -Output ".\PAK-Release\Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak" `
   -Force
 ```
 
@@ -339,9 +339,9 @@ The validated release icon standard is 400x400 PNG. If you are testing different
 
 ```powershell
 .\CustomIcon-tooling\inject-ome-pak-assets.ps1 `
-  -Pak ".\PAK Installers\Dell-OME-RestAPI-Community-Management-Pack-1.5.0.pak" `
+  -Pak ".\PAK-Release\Dell-OME-RestAPI-Community-Management-Pack-1.5.0.pak" `
   -IconsDir ".\CustomIcon-tooling\icons" `
-  -Output ".\PAK Installers\Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak" `
+  -Output ".\PAK-Release\Dell-OME-RestAPI-Community-Management-Pack-1.5.0-icons.pak" `
   -AllowNon400 `
   -Force
 ```
